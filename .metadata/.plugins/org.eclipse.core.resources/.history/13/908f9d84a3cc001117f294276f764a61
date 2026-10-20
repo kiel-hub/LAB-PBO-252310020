@@ -1,0 +1,41 @@
+package Quiz;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class Quizzz {
+	public static void main(String[] args) {
+		JOptionPane jop = new JOptionPane();
+		String Menu = "0 = Masukkan Judul Buku\n" + "1 = Hapus Judul Buku ke - \n" + "2 = Output Seluruh Judul Buku\n" + "3 = Keluar\n";
+		int pilihan;
+		ArrayList<String> judul = new ArrayList<String>();
+		do {
+			pilihan = Integer.parseInt(jop.showInputDialog(null,Menu,"informasi",JOptionPane.INFORMATION_MESSAGE));
+			switch(pilihan) {
+			case 0->{
+				judul.add(jop.showInputDialog(
+						null, 
+						"Masukkan judul buku untuk memasukkan judul: ",
+						"Input",
+						JOptionPane.QUESTION_MESSAGE
+						));
+			}
+			case 1->{
+				int i = Integer.parseInt(jop.showInputDialog(null, "Input Judul ke - "));
+				judul.remove(i);
+			}
+			
+			case 2->{
+				int z = judul.size();
+				String output = "Judul ke - " + k + " = " + judul.get(k) + "\n";
+				for(int k = 0; k<=z ; k++) {
+	
+					JOptionPane.showMessageDialog(null, output , "informasi",JOptionPane.INFORMATION_MESSAGE);
+				}
+			}
+			}
+		} while (pilihan!=3);
+	}
+}

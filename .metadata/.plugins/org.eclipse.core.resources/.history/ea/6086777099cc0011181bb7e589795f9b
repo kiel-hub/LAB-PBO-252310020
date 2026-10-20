@@ -1,0 +1,26 @@
+package Quiz;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class Quizzz {
+	public static void main(String[] args) {
+		JOptionPane jop = new JOptionPane();
+		int menu = 0;
+		do {
+			int i = 0;
+			if(menu == 0) {
+			ArrayList<String> judul = new ArrayList<String>();
+			judul.add(jop.showInputDialog(
+					null, 
+					"Masukkan judul buku: ",
+					"Input",
+					JOptionPane.QUESTION_MESSAGE
+					));
+			i++;
+			}
+		} while (menu!=4);
+	}
+}
